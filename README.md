@@ -73,6 +73,9 @@ DLLを作成するときの設定
 * リンカー -> 詳細設定 -> インポートライブラリ
   * $(ProjectDir)../../lib/$(TargetName).lib
 
+* ビルドイベント -> ビルド後イベント -> コマンドライン
+  * call _copy_headers.bat
+  * ※ビルド成功時にヘッダファイルをincludeディレクトリへコピーする
 
 test_dll.h, test_dll.cppのメモ
 ========
