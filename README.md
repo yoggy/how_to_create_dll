@@ -40,13 +40,13 @@ Visual StudioでDLLとEXEを作る時の自己流お作法のメモ。
 --------
 
 * 出力ディレクトリ
-  * $(ProjectDir)\..\..\bin\
+  * $(ProjectDir)/../../bin/
 * 中間ディレクトリ
-  * $(ProjectDir)\..\..\_obj\$(ProjectName)\$(Configuration)\
+  * $(ProjectDir)/../../_obj/$(ProjectName)/$(Configuration)/
 * ターゲット名
   * デバッグのみ $(ProjectName)D を設定しておく。
 * ビルドログファイル
-  * $(ProjectDir)\..\..\..\_obj\$(ProjectName)\$(Configuration)\$(MSBuildProjectName).log
+  * $(ProjectDir)/../../../_obj/$(ProjectName)/$(Configuration)/$(MSBuildProjectName).log
 
 デバッグ
 --------
@@ -58,7 +58,7 @@ C++
 --------
 
 * 追加のインクルードディレクトリ
-  * $(ProjectDir)\..\..\include\
+  * $(ProjectDir)/../../include/
 
 リンカー
 --------
@@ -66,12 +66,12 @@ C++
 * 出力ファイル 
   * $(OutDir)$(TargetName)$(TargetExt)
 * 追加のライブラリディレクトリ
-  * $(ProjectDir)\..\..\lib\
+  * $(ProjectDir)/../../lib/
 
 DLLを作成するときの設定
 --------
 * リンカー -> 詳細設定 -> インポートライブラリ
-  * $(ProjectDir)..\..\lib\$(TargetName).lib
+  * $(ProjectDir)../../lib/$(TargetName).lib
 
 
 test_dll.h, test_dll.cppのメモ
